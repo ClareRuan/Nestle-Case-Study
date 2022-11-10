@@ -9,7 +9,7 @@ Created on Tue Nov  8 12:20:37 2022
 # Nestle - clean 'R&R Data 2020.xlsx' - Review & Ranking
 # =============================================================================
 import pandas as pd
-df=pd.read_excel('R&R Data 2020.xlsx')
+df=pd.read_excel('./../Data Source/R&R Data 2020.xlsx')
 df.info()
 df.shape
 columns=list(df.columns)
@@ -26,5 +26,7 @@ df.isnull().mean().sort_values(ascending=False) # only 2 columns have missing va
 df['Moderation Status'].unique()
 df['Review Title'].unique()
 df['Review Text'].unique()
+df['Brand'].unique()
+
 
 # be able to join with 'Engage Date 2020.xlsx' on Product Brand

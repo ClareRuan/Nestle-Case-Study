@@ -12,7 +12,7 @@ Created on Fri Nov  4 11:41:19 2022
 import pandas as pd
 import matplotlib.pyplot as plt
 
-df = pd.read_excel("Engage Data 2020.xlsx")   # create a dataframe, fill in with excel contents
+df = pd.read_excel("./../Data Source/Engage Data 2020.xlsx")   # create a dataframe, fill in with excel contents
 pd.set_option('display.max_columns', None)  #show all columns
 
 # EDA
@@ -42,8 +42,13 @@ print(df.isnull().mean().sort_values(ascending=False))  # descending order by me
 
 # ETL
 # df['Contact Qualification'].unique()
-
-
+df['Brand'].unique()
+df['Business'].unique()
+df['Contact Way'].unique()
+df['Contact Reason'].unique()
+reason_list=list(df['Contact Reason'].unique())
+print(reason_list)
+len(reason_list)
 # convert string to datetime data type, format yyyy-mm-dd
 df['Opened Date']=pd.to_datetime(df['Opened Date'], format='%d/%m/%Y')
 df['Closed Date']=pd.to_datetime(df['Closed Date'], format='%d/%m/%Y')

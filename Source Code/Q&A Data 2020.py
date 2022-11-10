@@ -8,7 +8,7 @@ Created on Tue Nov  8 11:57:00 2022
 # Nestle - clean 'Q&A Data 2020.xlsx'
 # =============================================================================
 import pandas as pd
-df=pd.read_excel('Q&A Data 2020.xlsx')
+df=pd.read_excel(r'./../Data Source/Q&A Data 2020.xlsx')
 df.info()
 df.shape
 columns=list(df.columns)
